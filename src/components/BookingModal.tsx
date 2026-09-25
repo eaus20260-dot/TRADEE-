@@ -11,7 +11,7 @@ interface BookingModalProps {
 export const BookingModal: React.FC<BookingModalProps> = ({
   isOpen,
   onClose,
-  initialTier = 'Growth website',
+  initialTier = 'Growth',
 }) => {
   const [formData, setFormData] = useState<BookingFormData>({
     fullName: '',
@@ -105,7 +105,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               Thank you, <span className="text-white font-semibold">{formData.fullName}</span>. Our construction web & marketing specialists will reach out to <span className="text-purple-300">{formData.email}</span> within 24 hours.
             </p>
             <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-900/40 text-xs text-zinc-300">
-              <span className="font-semibold text-white">Selected Package:</span> {formData.selectedTier} (Eligible for 50% testimonial discount)
+              <span className="font-semibold text-white">Selected Package:</span> {formData.selectedTier} (Eligible for 30% testimonial discount)
             </div>
             <button
               onClick={handleReset}
@@ -204,8 +204,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, selectedTier: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-zinc-900/90 border border-purple-900/40 text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                 >
+                  <option value="Growth">Growth ($3,000)</option>
                   <option value="Brochure">Brochure ($1,000)</option>
-                  <option value="Growth website">Growth website ($3,000)</option>
                   <option value="Enterprise">Enterprise (Custom Quote)</option>
                   <option value="Free Strategy Call">Free Strategy Call</option>
                 </select>

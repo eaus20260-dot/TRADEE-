@@ -28,15 +28,15 @@ export const ContactSection: React.FC = () => {
           id="contact-heading"
           className="font-display text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white max-w-3xl leading-tight"
         >
-          Build success <span className="text-[#C4B5FD] font-extrabold">together</span>
+          Build Success <span className="text-[#C4B5FD] font-extrabold">Together</span>
         </h2>
 
-        {/* 50% Off Promo Subtext */}
+        {/* 30% Off Promo Subtext */}
         <p
           id="contact-promo-subtext"
           className="mt-6 text-zinc-300 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed"
         >
-          All pricing currently 50% off in exchange for case study and testimonial
+          All pricing currently 30% off in exchange for case study and testimonial
         </p>
 
         {/* Toast Notification */}

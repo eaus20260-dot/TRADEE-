@@ -24,7 +24,67 @@ export const TiersSection: React.FC<TiersSectionProps> = () => {
         {/* 3-Column Grid */}
         <div id="tiers-grid" className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           
-          {/* Tier 1: Brochure (Featured Card with Gradient Header + 3D Ribbon) */}
+          {/* Tier 1: Growth (Featured Card with Gradient Header + 3D Ribbon) */}
+          <div
+            id="tier-card-growth"
+            className="group relative flex flex-col justify-between rounded-2xl bg-[#09080e] border border-purple-600/60 overflow-hidden shadow-[0_0_35px_rgba(147,51,234,0.25)] transition-all duration-300 hover:border-purple-400 hover:shadow-[0_0_45px_rgba(147,51,234,0.35)]"
+          >
+            {/* Gradient Top with 3D Ribbon Graphic */}
+            <div className="relative bg-gradient-to-br from-[#7C3AED] via-[#6366F1] to-[#3B82F6] p-8 pt-7 pb-6 overflow-hidden">
+              <div className="flex items-start justify-between relative z-10">
+                <h3 id="tier-growth-title" className="font-display text-2xl sm:text-3xl font-extrabold text-white">
+                  Growth
+                </h3>
+              </div>
+            </div>
+
+            {/* Growth Body Content */}
+            <div className="p-8 flex flex-col justify-between flex-1">
+              <div>
+                <p id="tier-growth-tagline" className="text-zinc-300 text-sm leading-relaxed mb-6">
+                  An all-in-one engine to drive traffic and capture leads.
+                </p>
+
+                {/* Bullet Features */}
+                <ul id="tier-growth-features" className="space-y-3.5 text-zinc-300 text-sm">
+                  <li className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
+                    <span>3-5 page website to showcase your services and past projects</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
+                    <span>1 month of targeted blog content to drive organic search traffic</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
+                    <span>1 month of social media content (1 platform) to engage your audience</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
+                    <span className="font-semibold text-white">Completed in 2 weeks</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Bottom Price and Select */}
+              <div className="mt-10 pt-6 border-t border-purple-900/40 flex items-center justify-between">
+                <span id="tier-growth-price" className="font-display text-2xl sm:text-3xl font-bold text-white">
+                  $3,000
+                </span>
+                <a
+                  id="tier-growth-btn"
+                  href="https://form.jotform.com/262643423217049"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs uppercase tracking-wider font-semibold text-purple-300 hover:text-white px-3 py-1.5 rounded-md hover:bg-purple-900/40 transition-colors cursor-pointer inline-flex items-center"
+                >
+                  Select Tier →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Tier 2: Brochure (Featured Card with Gradient Header + 3D Ribbon) */}
           <div
             id="tier-card-brochure"
             className="group relative flex flex-col justify-between rounded-2xl bg-[#09080e] border border-purple-600/60 overflow-hidden shadow-[0_0_35px_rgba(147,51,234,0.25)] transition-all duration-300 hover:border-purple-400 hover:shadow-[0_0_45px_rgba(147,51,234,0.35)]"
@@ -73,66 +133,6 @@ export const TiersSection: React.FC<TiersSectionProps> = () => {
                 </span>
                 <a
                   id="tier-brochure-btn"
-                  href="https://form.jotform.com/262643423217049"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs uppercase tracking-wider font-semibold text-purple-300 hover:text-white px-3 py-1.5 rounded-md hover:bg-purple-900/40 transition-colors cursor-pointer inline-flex items-center"
-                >
-                  Select Tier →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Tier 2: Growth website (Featured Card with Gradient Header + 3D Ribbon) */}
-          <div
-            id="tier-card-growth"
-            className="group relative flex flex-col justify-between rounded-2xl bg-[#09080e] border border-purple-600/60 overflow-hidden shadow-[0_0_35px_rgba(147,51,234,0.25)] transition-all duration-300 hover:border-purple-400 hover:shadow-[0_0_45px_rgba(147,51,234,0.35)]"
-          >
-            {/* Gradient Top with 3D Ribbon Graphic */}
-            <div className="relative bg-gradient-to-br from-[#7C3AED] via-[#6366F1] to-[#3B82F6] p-8 pt-7 pb-6 overflow-hidden">
-              <div className="flex items-start justify-between relative z-10">
-                <h3 id="tier-growth-title" className="font-display text-2xl sm:text-3xl font-extrabold text-white">
-                  Growth website
-                </h3>
-              </div>
-            </div>
-
-            {/* Growth Body Content */}
-            <div className="p-8 flex flex-col justify-between flex-1">
-              <div>
-                <p id="tier-growth-tagline" className="text-zinc-300 text-sm leading-relaxed mb-6">
-                  An all-in-one engine to drive traffic and capture leads.
-                </p>
-
-                {/* Bullet Features */}
-                <ul id="tier-growth-features" className="space-y-3.5 text-zinc-300 text-sm">
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
-                    <span>3-5 page website to showcase your services and past projects</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
-                    <span>1 month of targeted blog content to drive organic search traffic</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
-                    <span>1 month of social media content (1 platform) to engage your audience</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 shrink-0" />
-                    <span className="font-semibold text-white">Completed in 2 weeks</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Bottom Price and Select */}
-              <div className="mt-10 pt-6 border-t border-purple-900/40 flex items-center justify-between">
-                <span id="tier-growth-price" className="font-display text-2xl sm:text-3xl font-bold text-white">
-                  $3,000
-                </span>
-                <a
-                  id="tier-growth-btn"
                   href="https://form.jotform.com/262643423217049"
                   target="_blank"
                   rel="noopener noreferrer"
