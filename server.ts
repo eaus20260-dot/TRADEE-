@@ -1,17 +1,18 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
 
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 
 // API Route for Contact / Booking Form Submission (Fallback redirect to Jotform)
-app.post('/api/contact', async (req, res) => {
+app.post('/api/contact', async (_req, res) => {
   res.redirect(303, 'https://form.jotform.com/262643423217049');
 });
 
@@ -24,18 +25,21 @@ app.get('/api/health', (_req, res) => {
 });
 
 async function startServer() {
-  if (process.env.NODE_ENV !== 'production') {
+  const distPath = path.join(process.cwd(), 'dist');
+  const hasDist = fs.existsSync(path.join(distPath, 'index.html'));
+
+  // Always serve static compiled Vite bundle if dist exists or in production mode
+  if (process.env.NODE_ENV === 'production' || hasDist) {
+    app.use(express.static(distPath));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  } else {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
     });
     app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
-    });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
