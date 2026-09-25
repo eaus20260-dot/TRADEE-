@@ -52,16 +52,16 @@ export const ContactSection: React.FC = () => {
           id="contact-actions-bar"
           className="mt-12 sm:mt-14 flex flex-wrap items-center justify-center gap-4 sm:gap-6 w-full max-w-4xl"
         >
-          {/* Online Consultation Form Pill */}
+          {/* Request Callback Pill */}
           <a
             id="contact-booking-pill"
             href="https://form.jotform.com/262643423217049"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow flex items-center gap-2.5 px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider text-white cursor-pointer shadow-lg"
-            title="Book your strategy consultation directly online"
+            title="Request a callback online"
           >
-            <span>Book Consultation Online</span>
+            <span>Request Callback</span>
           </a>
 
           {/* Get In Touch Pill */}
@@ -82,16 +82,16 @@ export const ContactSection: React.FC = () => {
           {/* Email Pill */}
           <a
             id="contact-email-pill"
-            href="mailto:HQ@TRADEESOLUTIONS.COM.AU"
+            href="mailto:ADMIN@TRADEESOLUTIONS.COM.AU"
             onClick={(e) => {
               // Also copy on click for convenience
-              copyToClipboard('HQ@TRADEESOLUTIONS.COM.AU', 'Email address');
+              copyToClipboard('ADMIN@TRADEESOLUTIONS.COM.AU', 'Email address');
             }}
             className="btn-pill group flex items-center gap-2.5 px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider text-white cursor-pointer shadow-md"
             title="Click to send email or copy address"
           >
             <Mail className="w-4 h-4 text-purple-300 group-hover:text-white transition-colors" />
-            <span>HQ@TRADEESOLUTIONS.COM.AU</span>
+            <span>ADMIN@TRADEESOLUTIONS.COM.AU</span>
           </a>
 
           {/* Social Icons Container */}

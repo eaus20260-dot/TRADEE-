@@ -131,7 +131,7 @@ export function getConfirmationEmailHtml(data: BookingFormData): string {
 
       <p style="margin-top: 20px;">
         📞 <strong>Phone:</strong> <a href="tel:0401626837">(0401) 626-837</a><br>
-        ✉️ <strong>Email:</strong> <a href="mailto:hq@tradeesolutions.com.au">hq@tradeesolutions.com.au</a>
+        ✉️ <strong>Email:</strong> <a href="mailto:admin@tradeesolutions.com.au">admin@tradeesolutions.com.au</a>
       </p>
 
       <p style="margin-top: 28px; color: #a1a1aa; font-size: 13px;">

@@ -178,7 +178,7 @@ export const TiersSection: React.FC<TiersSectionProps> = () => {
                 </ul>
               </div>
 
-              {/* Consultation Button */}
+              {/* Callback Button */}
               <div className="mt-8 pt-4">
                 <a
                   id="tier-enterprise-btn"
@@ -187,7 +187,7 @@ export const TiersSection: React.FC<TiersSectionProps> = () => {
                   rel="noopener noreferrer"
                   className="btn-glow w-full py-3.5 px-6 rounded-lg text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center cursor-pointer shadow-lg"
                 >
-                  BOOK CONSULTATION
+                  REQUEST CALLBACK
                 </a>
               </div>
             </div>
